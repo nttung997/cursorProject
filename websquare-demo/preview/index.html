@@ -31,29 +31,19 @@
   </table>
   <p class="note">
     This preview mimics <code>WebContent/ui/main.xml</code> without the WebSquare engine.
-    Start the Spring Boot app (<code>./gradlew bootRun</code>) so <code>/api/employees</code> is available,
-    or open this file after placing <code>employees.json</code> on a local server.
+    Data is loaded from <code>WebContent/data/employees.json</code> — no backend required.
   </p>
   <script>
     const statusEl = document.getElementById("status");
     const gridBody = document.getElementById("gridBody");
-    const API = "http://localhost:8080/api/employees";
-    const FALLBACK = "../WebContent/data/employees.json";
+    const DATA_URL = "../WebContent/data/employees.json";
 
     async function loadEmployees() {
       statusEl.textContent = "Loading...";
-      try {
-        let res = await fetch(API);
-        if (!res.ok) throw new Error("API unavailable");
-        const data = await res.json();
-        render(data);
-        statusEl.textContent = `Loaded ${data.length} employees from server (scwin.onpageload → submission).`;
-      } catch {
-        const res = await fetch(FALLBACK);
-        const data = await res.json();
-        render(data);
-        statusEl.textContent = `Loaded ${data.length} employees from local JSON (start bootRun for live API).`;
-      }
+      const res = await fetch(DATA_URL);
+      const data = await res.json();
+      render(data);
+      statusEl.textContent = `Loaded ${data.length} employees from employees.json.`;
     }
 
     function render(rows) {

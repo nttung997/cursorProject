@@ -19,7 +19,7 @@
         </w2:dataCollection>
         <w2:workflowCollection/>
         <xf:submission id="sbm_loadEmployees" ref="" target="data:json,dlt_employee"
-            action="/api/employees" method="get" mediatype="application/json" encoding="UTF-8"
+            action="/data/employees.json" method="get" mediatype="application/json" encoding="UTF-8"
             ev:submitdone="scwin.sbm_loadEmployees_submitdone"/>
     </xf:model>
     <script type="text/javascript"><![CDATA[
@@ -29,7 +29,7 @@
 
         scwin.sbm_loadEmployees_submitdone = function () {
             var count = dlt_employee.getRowCount();
-            txb_status.setValue("Loaded " + count + " employees from server.");
+            txb_status.setValue("Loaded " + count + " employees from employees.json.");
         };
 
         scwin.btn_refresh_onclick = function () {

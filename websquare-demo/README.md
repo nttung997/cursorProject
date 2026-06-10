@@ -1,6 +1,6 @@
 # WebSquare Demo Project
 
-Starter project for learning **WebSquare 5** with Spring Boot 3.
+Starter project for learning **WebSquare 5** — static data only, **no backend required**.
 
 ## Structure
 
@@ -11,17 +11,14 @@ Starter project for learning **WebSquare 5** with Spring Boot 3.
 | `websquare_home/` | WebSquare engine home (config) |
 | `local_libs/` | Place licensed WebSquare engine JAR here |
 | `preview/index.html` | Browser preview without WebSquare engine |
-| `src/main/java/` | Spring Boot REST API |
+| `src/main/java/` | Optional Spring Boot sample (not required) |
 
-## Quick start (no WebSquare engine)
+## Quick start
 
-```bash
-cd websquare-demo
-./gradlew bootRun
-```
+1. Open `WebContent/ui/main.xml` in **WebSquare Studio** → **F7** to run.
+2. Or open `preview/index.html` in a browser (serve the project folder if fetch is blocked).
 
-- API: http://localhost:8080/api/employees
-- Preview: open `preview/index.html` in a browser (or serve the folder)
+Data loads from `WebContent/data/employees.json` via Submission — no API server needed.
 
 ## Full WebSquare setup
 
@@ -30,17 +27,15 @@ cd websquare-demo
 3. Copy engine static assets into `WebContent/websquare/` (from your distribution).
 4. Point `websquare_home` at your full engine config.
 5. Open `WebContent/ui/main.xml` in WebSquare Studio (F7 to run in browser).
-6. With servlet registered, access pages via `*.wq` URL mapping.
 
 ## main.xml concepts
 
 - **DataCollection** — `dlt_employee` DataList for grid binding
-- **Submission** — `sbm_loadEmployees` fetches `/api/employees`
+- **Submission** — `sbm_loadEmployees` fetches `/data/employees.json`
 - **scwin** — page script namespace (`onpageload`, button handler)
 - **GridView** — `grd_employee` bound to `data:dlt_employee`
 
 ## Requirements
 
-- JDK 17+
-- Gradle (wrapper optional — run `gradle wrapper` if needed)
-- Licensed WebSquare 5 engine for XML page rendering
+- Licensed WebSquare 5 engine for XML page rendering (Studio includes this)
+- Optional: JDK 17+ only if you want to run the unused Spring Boot sample in `src/`
