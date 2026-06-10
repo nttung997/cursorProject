@@ -49,6 +49,8 @@ websquare-mcp/           MCP server package
 
 ## Setup
 
+See [websquare-mcp/README.md](../../websquare-mcp/README.md) and [websquare-mcp/AGENTS.md](../../websquare-mcp/AGENTS.md).
+
 ```bash
 cd websquare-mcp && pnpm install && pnpm run build
 ```

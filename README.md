@@ -7,7 +7,7 @@ WebSquare5 demo project with an MCP AI harness for Cursor agents.
 | Path | Description |
 |------|-------------|
 | [websquare-demo/](websquare-demo/) | Sample WebSquare pages and static data |
-| [websquare-mcp/](websquare-mcp/) | TypeScript MCP server for WebSquare development |
+| [websquare-mcp/](websquare-mcp/) | TypeScript MCP server — see [websquare-mcp/README.md](websquare-mcp/README.md) |
 | [AGENTS.md](AGENTS.md) | WebSquare5 coding rules and search guide |
 | [.cursor/skills/websquare/](.cursor/skills/websquare/) | Cursor skill for WebSquare workflows |
 
@@ -22,6 +22,8 @@ Open http://localhost:5500/preview/index.html
 
 ## MCP harness setup
 
+See **[websquare-mcp/README.md](websquare-mcp/README.md)** for installation, tool reference, validation rules, and architecture.
+
 ```bash
 cd websquare-mcp
 pnpm install
@@ -30,29 +32,7 @@ pnpm run build
 
 Reload Cursor. The `websquare` MCP server is configured in [.cursor/mcp.json](.cursor/mcp.json).
 
-### MCP tools
-
-| Tool | Purpose |
-|------|---------|
-| `get_dev_rules` | Read AGENTS.md |
-| `list_pages` | List `WebContent/**/*.xml` |
-| `read_page` | Raw XML + analysis |
-| `analyze_page` | DataLists, Submissions, components, scwin |
-| `validate_page` | Rule checks with fixes |
-| `scaffold_page` | Create grid/form page from template |
-| `suggest_search` | Doc links and web search queries |
-
-### MCP resources
-
-- `websquare://rules` — AGENTS.md
-- `websquare://pages` — page index
-- `websquare://page/{path}` — page XML
-
-### MCP prompts
-
-- `create-grid-page`
-- `add-submission`
-- `fix-grid-binding`
+AI agents: read [websquare-mcp/AGENTS.md](websquare-mcp/AGENTS.md) for required workflows.
 
 ## WebSquare Studio (full engine)
 
