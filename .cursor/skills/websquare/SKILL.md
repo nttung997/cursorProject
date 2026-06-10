@@ -50,7 +50,7 @@ websquare-mcp/           MCP server package
 ## Setup
 
 ```bash
-cd websquare-mcp && npm install && npm run build
+cd websquare-mcp && pnpm install && pnpm run build
 ```
 
 Reload Cursor after build so `.cursor/mcp.json` picks up the server.

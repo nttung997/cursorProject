@@ -2,6 +2,7 @@
 node_modules/
 dist/
 *.tsbuildinfo
+pnpm-debug.log*
 
 # Java / Gradle (websquare-demo)
 .gradle/

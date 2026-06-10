@@ -24,8 +24,8 @@ Open http://localhost:5500/preview/index.html
 
 ```bash
 cd websquare-mcp
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
 Reload Cursor. The `websquare` MCP server is configured in [.cursor/mcp.json](.cursor/mcp.json).
