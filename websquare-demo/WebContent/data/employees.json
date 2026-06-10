@@ -1,0 +1,6 @@
+[
+  { "id": "E001", "name": "Kim Minsoo", "department": "Engineering", "email": "minsoo.kim@example.com" },
+  { "id": "E002", "name": "Lee Jiyeon", "department": "Design", "email": "jiyeon.lee@example.com" },
+  { "id": "E003", "name": "Park Junho", "department": "Sales", "email": "junho.park@example.com" },
+  { "id": "E004", "name": "Choi Sora", "department": "HR", "email": "sora.choi@example.com" }
+]

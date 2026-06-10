@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal WebSquare home config placeholder.
+  Replace with your full websquare.xml from the WebSquare engine distribution.
+-->
+<websquare>
+    <debug value="true"/>
+    <encoding value="UTF-8"/>
+</websquare>
