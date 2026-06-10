@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "websquare": {
+      "command": "node",
+      "args": ["websquare-mcp/dist/index.js"],
+      "env": {
+        "WEBSQUARE_PROJECT_ROOT": "${workspaceFolder}"
+      }
+    }
+  }
+}

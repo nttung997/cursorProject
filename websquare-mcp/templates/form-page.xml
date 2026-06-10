@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare"
+    xmlns:xf="http://www.w3.org/2002/xforms">
+<head>
+    <w2:type>DEFAULT</w2:type>
+    <w2:buildDate/>
+    <xf:model>
+        <w2:dataCollection baseNode="map">
+            <w2:dataMap id="{{DATA_MAP_ID}}" baseNode="map">
+                <w2:keyInfo>
+{{KEY_INFO}}
+                </w2:keyInfo>
+            </w2:dataMap>
+        </w2:dataCollection>
+        <w2:workflowCollection/>
+    </xf:model>
+    <script type="text/javascript"><![CDATA[
+        scwin.onpageload = function () {
+            {{STATUS_TEXTBOX_ID}}.setValue("Ready.");
+        };
+
+        scwin.{{SAVE_BUTTON_ID}}_onclick = function () {
+            var name = {{NAME_INPUT_ID}}.getValue();
+            {{DATA_MAP_ID}}.set("name", name);
+            {{STATUS_TEXTBOX_ID}}.setValue("Saved: " + name);
+        };
+
+        scwin.{{CLEAR_BUTTON_ID}}_onclick = function () {
+            {{NAME_INPUT_ID}}.setValue("");
+            {{STATUS_TEXTBOX_ID}}.setValue("Cleared.");
+        };
+    ]]></script>
+</head>
+<body ev:onpageload="scwin.onpageload">
+    <xf:group id="grp_root" style="padding:16px;font-family:sans-serif;max-width:480px;">
+        <w2:textbox id="{{TITLE_TEXTBOX_ID}}" label="{{PAGE_TITLE}}"
+            style="font-size:20px;font-weight:bold;margin-bottom:12px;"/>
+        <w2:textbox id="{{STATUS_TEXTBOX_ID}}" label=""
+            style="margin-bottom:12px;color:#555;"/>
+        <xf:group id="grp_form" style="margin-bottom:16px;">
+            <w2:textbox id="lbl_name" label="Name" style="display:block;margin-bottom:4px;"/>
+            <xf:input id="{{NAME_INPUT_ID}}" style="width:100%;margin-bottom:12px;"/>
+        </xf:group>
+        <xf:group id="grp_actions">
+            <xf:trigger id="{{SAVE_BUTTON_ID}}" style="padding:6px 14px;margin-right:8px;">
+                <xf:label>Save</xf:label>
+                <ev:listener ev:event="onclick" ev:handler="scwin.{{SAVE_BUTTON_ID}}_onclick"/>
+            </xf:trigger>
+            <xf:trigger id="{{CLEAR_BUTTON_ID}}" style="padding:6px 14px;">
+                <xf:label>Clear</xf:label>
+                <ev:listener ev:event="onclick" ev:handler="scwin.{{CLEAR_BUTTON_ID}}_onclick"/>
+            </xf:trigger>
+        </xf:group>
+    </xf:group>
+</body>
+</html>

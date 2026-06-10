@@ -1,0 +1,40 @@
+# Node (websquare-mcp)
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Java / Gradle (websquare-demo)
+.gradle/
+build/
+out/
+*.class
+*.jar
+!websquare-demo/local_libs/README.txt
+
+# WebSquare licensed engine (add JAR locally)
+websquare-demo/local_libs/*.jar
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs & temp
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/

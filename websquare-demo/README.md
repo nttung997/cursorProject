@@ -35,7 +35,14 @@ Data loads from `WebContent/data/employees.json` via Submission — no API serve
 - **scwin** — page script namespace (`onpageload`, button handler)
 - **GridView** — `grd_employee` bound to `data:dlt_employee`
 
+## MCP AI harness
+
+This demo works with the **websquare** MCP server in the repo root. See [README.md](../README.md#mcp-harness-setup) for setup.
+
+Agents can `analyze_page` / `validate_page` on `WebContent/ui/main.xml` before editing.
+
 ## Requirements
 
 - Licensed WebSquare 5 engine for XML page rendering (Studio includes this)
 - Optional: JDK 17+ only if you want to run the unused Spring Boot sample in `src/`
+- Optional: Node.js 18+ for the MCP server (`websquare-mcp/`)

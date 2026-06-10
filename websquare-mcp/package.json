@@ -1,0 +1,27 @@
+{
+  "name": "websquare-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for WebSquare5 page development",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "websquare-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "fast-xml-parser": "^5.2.5",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
